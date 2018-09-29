@@ -18,7 +18,21 @@ class App extends Component {
     return (
       <div>
         {/* ! ADD NAVBAR HERE */}
-
+        <Navbar>
+          <Navbar.Header>
+            <Navbar.Brand>
+              Pet Hotel
+            </Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem href="/">
+              Home
+            </NavItem>
+            <NavItem href="/profiles">
+              About Creators
+            </NavItem>
+          </Nav>
+        </Navbar>
 
         {/* router to navigate between pages, each page is a container */}
         <Switch>
@@ -33,6 +47,8 @@ class App extends Component {
               <AllProfilesContainer history={this.props.history} />
             )}
           />
+
+      
         </Switch>
       </div>
     );
